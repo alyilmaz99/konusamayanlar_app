@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:konusamayanlar_app/core/base/model/size_config.dart';
+import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 
 class LoginHelpView extends StatefulWidget {
   const LoginHelpView({super.key});
@@ -10,16 +10,24 @@ class LoginHelpView extends StatefulWidget {
 
 class _LoginHelpViewState extends State<LoginHelpView> {
   @override
-  void initState() {
-    super.initState();
-    SizeConfig.init(context);
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: SizeConfig.screenWidth,
-      height: SizeConfig.screenHeight,
+    return BaseView(
+      builder: (context, width, height) {
+        return Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'KONUŞAMAYANLAR',
+                style: TextStyle(color: Colors.white),
+              ),
+              Container(
+                height: height / 5,
+                width: width / 2,
+                color: Colors.amber,
+              ),
+            ]);
+      },
     );
   }
 }

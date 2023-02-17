@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:konusamayanlar_app/product/widget/board_widgets.dart';
+import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
 import 'package:konusamayanlar_app/view/auth/splash/viewmodel/splash_viewmodel.dart';
 
 import '../../../../core/base/view/base_view.dart';
@@ -23,26 +25,15 @@ class _SplashScreenState extends SplashScreenViewModel {
             children: [
               Padding(
                 padding: EdgeInsets.only(top: height / 4),
-                child: Center(
-                  child: SizedBox(
-                    width: width / 1.17,
-                    height: height / 2.1,
-                    child: Image.asset('assets/images/splashScreen.png'),
-                  ),
+                child: BoardView(
+                  height: height,
+                  width: width,
                 ),
               ),
               const Spacer(),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 25.0),
-                child: Center(
-                  child: Text(
-                    'Designed By Vessac Software',
-                    style: GoogleFonts.arimo(
-                      color: Colors.white,
-                      fontSize: 12,
-                    ),
-                  ),
-                ),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 25.0),
+                child: DesignedByText(),
               ),
             ],
           ),

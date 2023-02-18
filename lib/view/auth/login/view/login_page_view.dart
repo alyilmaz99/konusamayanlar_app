@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:konusamayanlar_app/product/widget/board_widgets.dart';
@@ -35,7 +32,7 @@ class _LoginPageViewState extends State<LoginPageView> {
               height: height,
               width: width,
               bgColor: ColorConst.buttonOrange,
-              text: "LOGIN",
+              text: "loginButton".tr(),
               func: () {
                 Navigator.push(
                     context,
@@ -49,7 +46,7 @@ class _LoginPageViewState extends State<LoginPageView> {
             height: height,
             width: width,
             bgColor: ColorConst.buttonGrey,
-            text: "SIGN UP",
+            text: "signUPButton".tr(),
             func: () {},
           ),
           SizedBox(

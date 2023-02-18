@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
@@ -47,7 +48,7 @@ class _SignInViewState extends State<SignInView> {
                 height: height,
                 width: width,
                 bgColor: ColorConst.buttonGrey,
-                text: 'SIGN UP',
+                text: 'signUpButton'.tr(),
                 func: () {},
               ),
               const Spacer(flex: 1),

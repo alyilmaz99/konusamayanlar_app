@@ -8,6 +8,7 @@ import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:konusamayanlar_app/product/widget/board_widgets.dart';
 import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
 import 'package:konusamayanlar_app/product/widget/login_button_widget.dart';
+import 'package:konusamayanlar_app/view/auth/login/view/sign_in_view.dart';
 
 class LoginPageView extends StatefulWidget {
   const LoginPageView({super.key});
@@ -31,11 +32,16 @@ class _LoginPageViewState extends State<LoginPageView> {
             height: height / 10,
           ),
           LoginButton(
-            height: height,
-            width: width,
-            bgColor: ColorConst.buttonOrange,
-            text: "LOGIN",
-          ),
+              height: height,
+              width: width,
+              bgColor: ColorConst.buttonOrange,
+              text: "LOGIN",
+              func: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SignInView()));
+              }),
           const SizedBox(
             height: 15,
           ),
@@ -44,6 +50,7 @@ class _LoginPageViewState extends State<LoginPageView> {
             width: width,
             bgColor: ColorConst.buttonGrey,
             text: "SIGN UP",
+            func: () {},
           ),
           SizedBox(
             height: height / 15,

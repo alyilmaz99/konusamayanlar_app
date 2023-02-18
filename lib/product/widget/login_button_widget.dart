@@ -12,15 +12,17 @@ class LoginButton extends StatelessWidget {
     required this.width,
     required this.bgColor,
     required this.text,
+    required this.func,
   });
   final double height;
   final double width;
   final Color bgColor;
   final String text;
+  final VoidCallback func;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: func,
       style: ElevatedButton.styleFrom(
           elevation: 0,
           shape: const RoundedRectangleBorder(),

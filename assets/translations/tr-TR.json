@@ -1,0 +1,9 @@
+{
+  "loginButton": "GIRIS",
+  "signUPButton": "KAYIT OL",
+  "nameTextField": "ISIM",
+  "passwordTextField": "SIFRE",
+  "forgotPass": "Sifremi unuttum?",
+  "rememberMe": "Beni Hatirla",
+  "noAccount": "Eger bir hesabin yoksa"
+}

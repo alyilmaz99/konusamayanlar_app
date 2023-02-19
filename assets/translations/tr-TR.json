@@ -5,5 +5,13 @@
   "passwordTextField": "SIFRE",
   "forgotPass": "Sifremi unuttum?",
   "rememberMe": "Beni Hatirla",
-  "noAccount": "Eger bir hesabin yoksa"
+  "noAccount": "Eger bir hesabin yoksa",
+  "loginHelp": "Giris Yardimi",
+  "findAccount": "Hesabini bul" ,
+  "enterEmailInfo": "Hesabina ait email adresini gir",
+  "emailTextField" : "Email adresini gir",
+  "sendCode" : "Kod gönder",
+  "loginCodeSent": "Giris kodu gönderildi",
+  "sentCodeSubtext": "Hesabiniza geri donebilmeniz için mail adresine bir giris kodu gonderdik",
+  "okButton" : "Tamam"
 }

@@ -5,11 +5,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
+import 'package:konusamayanlar_app/product/widget/auth_board.dart';
 import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
 import 'package:konusamayanlar_app/product/widget/login_button_widget.dart';
+import 'package:konusamayanlar_app/product/widget/short_login_button_widget.dart';
+import 'package:konusamayanlar_app/product/widget/switch_row_widget.dart';
 import 'package:konusamayanlar_app/product/widget/textfield_widget.dart';
 import 'package:konusamayanlar_app/view/auth/create/view/sign_up_view.dart';
 import 'package:konusamayanlar_app/view/auth/login/view/login_help.dart';
+import 'package:konusamayanlar_app/view/home/mainpage/view/main_page_view.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({super.key});
@@ -36,14 +40,10 @@ class _SignInViewState extends State<SignInView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Spacer(flex: 2),
-                  Container(
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/board.png')),
-                    ),
-                    height: height / 1.9,
-                    width: width / 1,
-                    child: Column(
+                  AuthBoard(
+                    height: height,
+                    width: width,
+                    widget: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SizedBox(
@@ -82,71 +82,50 @@ class _SignInViewState extends State<SignInView> {
                         const SizedBox(
                           height: 15,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'rememberMe',
-                              style: GoogleFonts.arimo(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400,
-                                color: ColorConst.textGrey,
-                              ),
-                            ).tr(),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            Switch(
-                              activeColor: Colors.white,
-                              activeTrackColor: Colors.white38,
-                              inactiveTrackColor: Colors.white38,
-                              value: valueS,
-                              onChanged: (value) => setState(
-                                () {
-                                  valueS = value;
-                                },
-                              ),
-                            ),
-                          ],
+                        SwitchRowWidget(
+                          valueS: valueS,
+                          func: (value) => setState(
+                            () {
+                              valueS = value;
+                            },
+                          ),
+                          text: 'rememberMe',
                         ),
                         const SizedBox(
                           height: 5,
                         ),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const LoginHelpView()));
-                          },
-                          child: Text(
-                            'forgotPass',
-                            style: GoogleFonts.arimo(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.grey.shade600),
-                          ).tr(),
+                        SizedBox(
+                          height: 25,
+                          width: 100,
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const LoginHelpView()));
+                            },
+                            child: Text(
+                              'forgotPass',
+                              style: GoogleFonts.arimo(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.grey.shade600),
+                            ).tr(),
+                          ),
                         ),
                         const SizedBox(
                           height: 20,
                         ),
-                        TextButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: ColorConst.buttonOrange,
-                            shadowColor: ColorConst.textGrey,
-                            shape: const StadiumBorder(),
-                            minimumSize: const Size(140, 30),
-                          ),
-                          child: Text(
-                            'loginButton',
-                            style: GoogleFonts.arimo(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ).tr(),
+                        ShorLoginButton(
+                          text: 'loginButton',
+                          func: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const MainPageView()));
+                          },
                         ),
                       ],
                     ),

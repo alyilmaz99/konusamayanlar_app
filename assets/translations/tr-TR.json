@@ -3,15 +3,17 @@
   "signUPButton": "KAYIT OL",
   "nameTextField": "ISIM",
   "passwordTextField": "SIFRE",
+  "mailTextField": "MAIL",
   "forgotPass": "Sifremi unuttum?",
   "rememberMe": "Beni Hatirla",
   "noAccount": "Eger bir hesabin yoksa",
   "loginHelp": "Giris Yardimi",
-  "findAccount": "Hesabini bul" ,
+  "findAccount": "Hesabini bul",
   "enterEmailInfo": "Hesabina ait email adresini gir",
-  "emailTextField" : "Email adresini gir",
-  "sendCode" : "Kod gönder",
+  "emailTextField": "Email adresini gir",
+  "sendCode": "Kod gönder",
   "loginCodeSent": "Giris kodu gönderildi",
   "sentCodeSubtext": "Hesabiniza geri donebilmeniz için mail adresine bir giris kodu gonderdik",
-  "okButton" : "Tamam"
+  "okButton": "Tamam",
+  "KVKK": "KVKK"
 }

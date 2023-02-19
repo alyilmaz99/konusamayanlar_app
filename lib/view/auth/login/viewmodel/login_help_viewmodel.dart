@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
-import '../view/login_help.dart';
+import '../view/login_help_view.dart';
 
 abstract class LoginHelpViewModel extends State<LoginHelpView> {
   void showPopup({

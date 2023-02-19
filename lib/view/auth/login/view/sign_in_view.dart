@@ -12,7 +12,7 @@ import 'package:konusamayanlar_app/product/widget/short_login_button_widget.dart
 import 'package:konusamayanlar_app/product/widget/switch_row_widget.dart';
 import 'package:konusamayanlar_app/product/widget/textfield_widget.dart';
 import 'package:konusamayanlar_app/view/auth/create/view/sign_up_view.dart';
-import 'package:konusamayanlar_app/view/auth/login/view/login_help.dart';
+import 'package:konusamayanlar_app/view/auth/login/view/login_help_view.dart';
 import 'package:konusamayanlar_app/view/home/mainpage/view/main_page_view.dart';
 
 class SignInView extends StatefulWidget {

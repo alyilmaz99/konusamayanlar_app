@@ -12,7 +12,7 @@ import '../../../../product/widget/auth_board.dart';
 import '../../../../product/widget/designedby_text_widget.dart';
 import '../../../../product/widget/login_button_widget.dart';
 import '../../../../product/widget/textfield_widget.dart';
-import '../../login/view/login_help.dart';
+import '../../login/view/login_help_view.dart';
 
 class SingUpView extends StatefulWidget {
   const SingUpView({super.key});

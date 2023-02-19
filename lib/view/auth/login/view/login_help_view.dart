@@ -4,6 +4,7 @@ import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
+import 'package:konusamayanlar_app/product/widget/sent_email_popup.dart';
 import 'package:konusamayanlar_app/view/auth/login/viewmodel/login_help_viewmodel.dart';
 import '../../../../product/widget/textfield_widget.dart';
 
@@ -88,9 +89,14 @@ class _LoginHelpViewState extends LoginHelpViewModel {
                         ),
                         TextButton(
                           onPressed: () {
-                            showPopup(
-                              myHeight: height / 3,
-                              myWidth: width,
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return SentEmailPopup(
+                                  myHeight: height / 3,
+                                  myWidth: width,
+                                );
+                              },
                             );
                           },
                           style: ElevatedButton.styleFrom(

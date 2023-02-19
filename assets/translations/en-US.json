@@ -5,5 +5,13 @@
   "passwordTextField": "PASSWORD",
   "forgotPass": "Forgot Password?",
   "rememberMe": "Remember Me",
-  "noAccount": "If you dont have an account"
+  "noAccount": "If you dont have an account",
+  "loginHelp": "Login Help",
+  "findAccount": "Find your account" ,
+  "enterEmailInfo": "Enter your email that your account",
+  "emailTextField" : "Enter your email",
+  "sendCode" : "Send Code",
+  "loginCodeSent": "Login code sent",
+  "sentCodeSubtext": "We sent a login code to your email address so you can get back to your account.",
+  "okButton" : "OK"
 }

@@ -9,6 +9,7 @@ import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
 import 'package:konusamayanlar_app/product/widget/login_button_widget.dart';
 import 'package:konusamayanlar_app/product/widget/textfield_widget.dart';
 import 'package:konusamayanlar_app/view/auth/create/view/sign_up_view.dart';
+import 'package:konusamayanlar_app/view/auth/login/view/login_help.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({super.key});
@@ -111,13 +112,22 @@ class _SignInViewState extends State<SignInView> {
                         const SizedBox(
                           height: 5,
                         ),
-                        Text(
-                          'forgotPass',
-                          style: GoogleFonts.arimo(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.grey.shade600),
-                        ).tr(),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const LoginHelpView()));
+                          },
+                          child: Text(
+                            'forgotPass',
+                            style: GoogleFonts.arimo(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey.shade600),
+                          ).tr(),
+                        ),
                         const SizedBox(
                           height: 20,
                         ),

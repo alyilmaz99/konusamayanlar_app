@@ -1,4 +1,9 @@
 {
   "loginButton": "LOGIN",
-  "signUPButton": "SIGN UP"
+  "signUPButton": "SIGN UP",
+  "nameTextField": "NAME",
+  "passwordTextField": "PASSWORD",
+  "forgotPass": "Forgot Password?",
+  "rememberMe": "Remember Me",
+  "noAccount": "If you dont have an account"
 }

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
-import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:konusamayanlar_app/view/auth/create/viewmodel/sign_up_viewmodel.dart';
 
 class SingUpView extends StatefulWidget {

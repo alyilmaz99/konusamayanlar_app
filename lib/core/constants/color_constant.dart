@@ -7,4 +7,6 @@ class ColorConst {
   static const Color buttonGrey = Color.fromRGBO(217, 217, 217, 1);
   static const Color buttonLogin = Color.fromRGBO(212, 143, 11, 1);
   static const Color textGrey = Color.fromRGBO(184, 184, 184, 1);
+  static const Color switchGreen = Color.fromRGBO(17, 190, 45, 1);
+  static const Color switchGray = Colors.white38;
 }

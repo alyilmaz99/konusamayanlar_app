@@ -15,5 +15,8 @@
   "loginCodeSent": "Giris kodu gönderildi",
   "sentCodeSubtext": "Hesabiniza geri donebilmeniz için mail adresine bir giris kodu gonderdik",
   "okButton": "Tamam",
-  "KVKK": "KVKK"
+  "KVKK": "KVKK",
+  "textCount": "Metin Sayisi",
+  "superXcount": "Super Carpi",
+  "xCount": "Carpi"
 }

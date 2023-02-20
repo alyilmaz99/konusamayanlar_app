@@ -15,5 +15,8 @@
   "loginCodeSent": "Login code sent",
   "sentCodeSubtext": "We sent a login code to your email address so you can get back to your account.",
   "okButton": "OK",
-  "KVKK": "KVKK"
+  "KVKK": "KVKK",
+  "textCount": "Text Count",
+  "superXcount": "Super Cross",
+  "xCount": "Croos"
 }

@@ -66,22 +66,38 @@ class _ProfileViewState extends State<ProfileView> {
                   width: width / 1,
                   child: Column(
                     children: [
-                      SizedBox(height: height / 10),
-                      const Text(
-                        'userName',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      SizedBox(height: height / 20),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(
+                                right: width / 16, left: width / 8),
+                            child: CircleAvatar(
+                              radius: height / 20,
+                              backgroundImage: const NetworkImage(
+                                  'https://ca.slack-edge.com/T04PLHL1K2A-U04PVKME004-a416acec8ec0-512'),
+                            ),
+                          ),
+                          Column(
+                            children: [
+                              Text('Ali Yılmaz',
+                                  textAlign: TextAlign.start,
+                                  style: GoogleFonts.arimo(
+                                    color:
+                                        const Color.fromRGBO(197, 197, 197, 1),
+                                    fontSize: 20,
+                                  )),
+                              Text('@alyimaz',
+                                  textAlign: TextAlign.start,
+                                  style: GoogleFonts.arimo(
+                                    color: ColorConst.buttonOrange,
+                                    fontSize: 20,
+                                  )),
+                            ],
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Biyografi',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
-                      ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: height / 40),
                       Padding(
                         padding: EdgeInsets.only(
                             right: width / 20, left: width / 20),

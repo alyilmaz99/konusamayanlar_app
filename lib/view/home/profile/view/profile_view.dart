@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
+import 'package:konusamayanlar_app/product/widget/text_box_widget.dart';
 import 'package:konusamayanlar_app/product/widget/users_count_info.dart';
 
 class ProfileView extends StatefulWidget {
@@ -107,6 +108,8 @@ class _ProfileViewState extends State<ProfileView> {
                           xCount: 13,
                         ),
                       ),
+                      SizedBox(height: height / 40),
+                      const TextBoxWidget(),
                     ],
                   ),
                 ),

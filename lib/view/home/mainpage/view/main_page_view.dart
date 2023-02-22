@@ -1,5 +1,6 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
+import 'package:konusamayanlar_app/core/base/view/base_view.dart';
+import 'package:konusamayanlar_app/view/home/mainpage/viewmodel/main_page_viewmodel.dart';
 
 class MainPageView extends StatefulWidget {
   const MainPageView({super.key});
@@ -8,9 +9,16 @@ class MainPageView extends StatefulWidget {
   State<MainPageView> createState() => _MainPageViewState();
 }
 
-class _MainPageViewState extends State<MainPageView> {
+class _MainPageViewState extends MainPageViewModel {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return BaseView(
+      builder: (context, width, height, appbar) {
+        return Scaffold(
+          appBar: appbar,
+          body: Container(),
+        );
+      },
+    );
   }
 }

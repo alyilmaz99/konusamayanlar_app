@@ -15,7 +15,7 @@ class ProfileView extends StatefulWidget {
 class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
-    return BaseView(builder: (context, width, height) {
+    return BaseView(builder: (context, width, height, appbar) {
       return Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: ColorConst.appBgColor,

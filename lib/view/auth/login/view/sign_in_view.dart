@@ -27,7 +27,7 @@ class _SignInViewState extends State<SignInView> {
   @override
   Widget build(BuildContext context) {
     return BaseView(
-      builder: (context, width, height) {
+      builder: (context, width, height, appbar) {
         return Scaffold(
           resizeToAvoidBottomInset: false,
           backgroundColor: ColorConst.appBgColor,
@@ -120,11 +120,10 @@ class _SignInViewState extends State<SignInView> {
                         ShorLoginButton(
                           text: 'loginButton',
                           func: () {
-                            Navigator.push(
-                                context,
+                            Navigator.of(context).pushAndRemoveUntil(
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        const MainPageView()));
+                                    builder: (context) => const MainPageView()),
+                                (Route<dynamic> route) => false);
                           },
                         ),
                       ],

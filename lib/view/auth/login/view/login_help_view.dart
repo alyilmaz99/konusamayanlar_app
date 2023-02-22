@@ -19,7 +19,7 @@ class _LoginHelpViewState extends LoginHelpViewModel {
   @override
   Widget build(BuildContext context) {
     return BaseView(
-      builder: (context, width, height) {
+      builder: (context, width, height, appbar) {
         return Scaffold(
           resizeToAvoidBottomInset: false,
           backgroundColor: ColorConst.appBgColor,

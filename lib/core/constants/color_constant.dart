@@ -10,4 +10,7 @@ class ColorConst {
   static const Color switchGreen = Color.fromRGBO(17, 190, 45, 1);
   static const Color switchGray = Colors.white38;
   static const Color appBarBg = Color.fromRGBO(50, 49, 49, 1);
+  static const Color navBarBg = Color.fromRGBO(255, 203, 5, 1);
+  static const Color navBarSelected = Color.fromRGBO(255, 203, 5, 0.1);
+  static const Color homeContainerBg = Color.fromRGBO(35, 31, 32, 1);
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
+import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:konusamayanlar_app/view/home/mainpage/viewmodel/main_page_viewmodel.dart';
 import 'package:molten_navigationbar_flutter/molten_navigationbar_flutter.dart';
 
@@ -17,7 +18,10 @@ class _MainPageViewState extends MainPageViewModel {
     return BaseView(
       builder: (context, width, height, appbar) {
         return Scaffold(
+          backgroundColor: ColorConst.appBgColor,
           bottomNavigationBar: MoltenBottomNavigationBar(
+            domeCircleColor: ColorConst.appBarBg,
+            barColor: ColorConst.navBarBg,
             selectedIndex: _selectedIndex,
             onTabChange: (clickedIndex) {
               setState(() {
@@ -26,10 +30,10 @@ class _MainPageViewState extends MainPageViewModel {
             },
             tabs: [
               MoltenTab(
-                icon: const Icon(Icons.search),
+                icon: const Icon(Icons.home),
               ),
               MoltenTab(
-                icon: const Icon(Icons.home),
+                icon: Image.asset('assets/images/prize.png'),
               ),
               MoltenTab(
                 icon: const Icon(Icons.person),
@@ -37,7 +41,9 @@ class _MainPageViewState extends MainPageViewModel {
             ],
           ),
           appBar: appbar,
-          body: Container(),
+          body: Center(
+            child: screenList.elementAt(_selectedIndex),
+          ),
         );
       },
     );

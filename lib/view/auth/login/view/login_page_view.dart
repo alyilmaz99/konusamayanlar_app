@@ -18,7 +18,7 @@ class LoginPageView extends StatefulWidget {
 class _LoginPageViewState extends State<LoginPageView> {
   @override
   Widget build(BuildContext context) {
-    return BaseView(builder: ((context, width, height) {
+    return BaseView(builder: ((context, width, height, appbar) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

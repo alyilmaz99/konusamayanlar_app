@@ -12,7 +12,6 @@ import '../../../../product/widget/auth_board.dart';
 import '../../../../product/widget/designedby_text_widget.dart';
 import '../../../../product/widget/login_button_widget.dart';
 import '../../../../product/widget/textfield_widget.dart';
-import '../../login/view/login_help_view.dart';
 
 class SingUpView extends StatefulWidget {
   const SingUpView({super.key});
@@ -27,7 +26,7 @@ class _SingUpViewState extends SignUpViewModel {
   @override
   Widget build(BuildContext context) {
     return BaseView(
-      builder: (context, width, height) {
+      builder: (context, width, height, appbar) {
         return Scaffold(
           resizeToAvoidBottomInset: false,
           backgroundColor: ColorConst.appBgColor,

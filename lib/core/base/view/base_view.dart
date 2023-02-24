@@ -1,20 +1,33 @@
 import 'package:flutter/material.dart';
 
+import 'package:konusamayanlar_app/core/constants/color_constant.dart';
+
 class BaseView extends StatelessWidget {
-  final Widget Function(BuildContext context, double width, double height)
-      builder;
+  final Widget Function(
+      BuildContext context, double width, double height, AppBar appBar) builder;
   // final AppBar? appBar;
 
-  const BaseView({Key? key, required this.builder}) : super(key: key);
+  const BaseView({super.key, required this.builder});
+  static int _selectedIndex = 0;
 
   static MediaQueryData _mediaQueryData = const MediaQueryData();
   static double screenWidth = 0.0;
   static double screenHeight = 0.0;
+  static AppBar? appbar = AppBar(
+    backgroundColor: ColorConst.appBarBg,
+    title: Center(
+      child: SizedBox(
+        width: screenWidth / 1.4,
+        child: Image.asset('assets/images/header.png'),
+      ),
+    ),
+  );
 
   static void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;
+    appbar = appbar;
   }
 
   @override
@@ -25,7 +38,7 @@ class BaseView extends StatelessWidget {
         width: screenWidth,
         height: screenHeight,
         color: const Color(0xFF121111),
-        child: builder(context, screenWidth, screenHeight),
+        child: builder(context, screenWidth, screenHeight, appbar!),
       ),
     );
   }

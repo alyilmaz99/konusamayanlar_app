@@ -17,7 +17,7 @@ class _SplashScreenState extends SplashScreenViewModel {
   @override
   Widget build(BuildContext context) {
     return BaseView(
-      builder: (context, width, height) {
+      builder: (context, width, height, appbar) {
         return Scaffold(
           backgroundColor: const Color(0xFF121111),
           body: Column(

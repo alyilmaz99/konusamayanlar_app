@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
+import 'package:konusamayanlar_app/product/widget/report_popup_widget.dart';
 import 'package:konusamayanlar_app/view/home/homepage/viewmodel/home_page_viewmodel.dart';
 
 class HomePage extends StatefulWidget {
@@ -64,7 +63,14 @@ class _HomePageState extends HomePageViewModel {
                         width: 20,
                         child: IconButton(
                           iconSize: 16,
-                          onPressed: () {},
+                          onPressed: () {
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) {
+                                return const ReportPopup();
+                              },
+                            );
+                          },
                           icon: Image.asset(
                             'assets/images/three_dot.png',
                             height: 16,

@@ -8,6 +8,6 @@ abstract class MainPageViewModel extends State<MainPageView> {
   List<Widget> screenList = [
     const HomePage(),
     const Text('Second Page'),
-    const Text('Third Page'),
+    const ProfileView(),
   ];
 }

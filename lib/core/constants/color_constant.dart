@@ -13,4 +13,5 @@ class ColorConst {
   static const Color navBarBg = Color.fromRGBO(255, 203, 5, 1);
   static const Color navBarSelected = Color.fromRGBO(255, 203, 5, 0.1);
   static const Color homeContainerBg = Color.fromRGBO(35, 31, 32, 1);
+  static const Color textGreyMore = Color.fromRGBO(184, 184, 184, 0.5);
 }

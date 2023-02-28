@@ -2,9 +2,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
+import 'package:konusamayanlar_app/product/router/route_constant.dart';
 import 'package:konusamayanlar_app/product/widget/auth_board.dart';
 import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
 import 'package:konusamayanlar_app/product/widget/login_button_widget.dart';
@@ -99,11 +101,7 @@ class _SignInViewState extends State<SignInView> {
                           width: 100,
                           child: TextButton(
                             onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const LoginHelpView()));
+                              context.pushReplacement('/forgotPass');
                             },
                             child: Text(
                               'forgotPass',
@@ -118,14 +116,11 @@ class _SignInViewState extends State<SignInView> {
                           height: 20,
                         ),
                         ShorLoginButton(
-                          text: 'loginButton',
-                          func: () {
-                            Navigator.of(context).pushAndRemoveUntil(
-                                MaterialPageRoute(
-                                    builder: (context) => const MainPageView()),
-                                (Route<dynamic> route) => false);
-                          },
-                        ),
+                            text: 'loginButton',
+                            func: () {
+                              return context
+                                  .pushReplacementNamed(RouteConstants.home);
+                            }),
                       ],
                     ),
                   ),
@@ -147,10 +142,7 @@ class _SignInViewState extends State<SignInView> {
                     bgColor: ColorConst.buttonGrey,
                     text: 'signUPButton'.tr(),
                     func: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SingUpView()));
+                      context.pushReplacementNamed(RouteConstants.singUp);
                     },
                   ),
                   const Spacer(flex: 1),

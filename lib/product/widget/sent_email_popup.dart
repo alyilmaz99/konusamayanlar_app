@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 
@@ -52,7 +53,7 @@ class SentEmailPopup extends StatelessWidget {
             ),
             TextButton(
               onPressed: (() {
-                Navigator.pop(context);
+                context.pop();
               }),
               child: Text(
                 'okButton',

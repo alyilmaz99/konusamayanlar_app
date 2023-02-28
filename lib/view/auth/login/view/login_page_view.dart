@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:konusamayanlar_app/product/widget/board_widgets.dart';
@@ -35,8 +36,7 @@ class _LoginPageViewState extends State<LoginPageView> {
             bgColor: ColorConst.buttonOrange,
             text: "loginButton".tr(),
             func: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const SignInView()));
+              context.pushReplacement('/signIn');
             },
           ),
           const SizedBox(
@@ -48,12 +48,7 @@ class _LoginPageViewState extends State<LoginPageView> {
             bgColor: ColorConst.buttonGrey,
             text: "signUPButton".tr(),
             func: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const SingUpView(),
-                ),
-              );
+              context.pushReplacement('/signUp');
             },
           ),
           SizedBox(

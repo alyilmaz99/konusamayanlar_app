@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ReportPopup extends StatefulWidget {
   const ReportPopup({super.key});
@@ -59,14 +60,14 @@ class _ReportPopupState extends State<ReportPopup> {
         TextButton(
           child: const Text("İptal"),
           onPressed: () {
-            Navigator.of(context).pop();
+            context.pop();
           },
         ),
         TextButton(
           child: const Text("Gönder"),
           onPressed: () {
             submitReport();
-            Navigator.of(context).pop();
+            context.pop();
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
                 content: Text('Başarıyla Şikayet Edildi'),

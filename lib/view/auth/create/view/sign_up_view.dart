@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/product/widget/short_login_button_widget.dart';
@@ -8,6 +9,7 @@ import 'package:konusamayanlar_app/view/auth/create/viewmodel/sign_up_viewmodel.
 import 'package:konusamayanlar_app/view/auth/login/view/login_page_view.dart';
 
 import '../../../../core/constants/color_constant.dart';
+import '../../../../product/router/route_constant.dart';
 import '../../../../product/widget/auth_board.dart';
 import '../../../../product/widget/designedby_text_widget.dart';
 import '../../../../product/widget/login_button_widget.dart';
@@ -143,10 +145,7 @@ class _SingUpViewState extends SignUpViewModel {
                     bgColor: ColorConst.buttonGrey,
                     text: 'loginButton'.tr(),
                     func: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginPageView()));
+                      context.pushReplacementNamed(RouteConstants.signIn);
                     },
                   ),
                   const Spacer(flex: 1),

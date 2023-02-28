@@ -35,7 +35,8 @@ class _LoginHelpViewState extends LoginHelpViewModel {
                   Container(
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/board.png')),
+                        image: AssetImage('assets/images/board.png'),
+                      ),
                     ),
                     height: height / 1.9,
                     width: width / 1,

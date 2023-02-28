@@ -69,7 +69,7 @@ class AppRouter {
         },
       ),
     ],
-    redirect: (context, state) async {
+    redirect: (context, state) {
       bool isAuthenticated = false;
       if (!isAuthenticated && state.subloc == '/') {
         return state.namedLocation(RouteConstants.login);

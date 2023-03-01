@@ -7,4 +7,5 @@ class RouteConstants {
   static String signIn = 'signIn';
   static String singUp = 'signUp';
   static String forgotPass = 'forgotPass';
+  static String addNewStory = 'addNewStory';
 }

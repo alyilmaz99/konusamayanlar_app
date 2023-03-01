@@ -15,6 +15,8 @@ Future<void> main() async {
   );
 }
 
+late final appRoutes = AppRouter();
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -30,8 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routeInformationParser: AppRouter().router.routeInformationParser,
-      routerDelegate: AppRouter().router.routerDelegate,
+      routerConfig: appRoutes.router,
     );
   }
 }

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:konusamayanlar_app/view/auth/create/view/add_new_story_view.dart';
 import 'package:konusamayanlar_app/view/auth/create/view/sign_up_view.dart';
 import 'package:konusamayanlar_app/view/auth/login/view/login_help_view.dart';
 import 'package:konusamayanlar_app/view/auth/login/view/login_page_view.dart';
@@ -65,6 +66,15 @@ class AppRouter {
         pageBuilder: (context, state) {
           return const MaterialPage(
             child: LoginHelpView(),
+          );
+        },
+      ),
+      GoRoute(
+        name: RouteConstants.addNewStory,
+        path: '/addNewStory',
+        pageBuilder: (context, state) {
+          return const MaterialPage(
+            child: AddNewStoryView(),
           );
         },
       ),

@@ -21,7 +21,7 @@ class _ProfileViewState extends State<ProfileView> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 2,
             ),
             SizedBox(

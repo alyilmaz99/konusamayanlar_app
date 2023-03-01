@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
+import 'package:konusamayanlar_app/product/router/route_constant.dart';
 import 'package:konusamayanlar_app/product/widget/home/text_container.dart';
 import 'package:konusamayanlar_app/view/home/homepage/viewmodel/home_page_viewmodel.dart';
 
@@ -18,6 +20,12 @@ class _HomePageState extends HomePageViewModel {
     return BaseView(
       builder: (context, width, height, appBar) {
         return Scaffold(
+          floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                context.push('/addNewStory');
+              },
+              backgroundColor: ColorConst.navBarBg,
+              child: const Icon(Icons.add)),
           backgroundColor: ColorConst.appBgColor,
           body: SingleChildScrollView(
             child: Column(

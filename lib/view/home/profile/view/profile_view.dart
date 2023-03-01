@@ -22,7 +22,10 @@ class _ProfileViewState extends State<ProfileView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: height / 1.4,
+              height: 2,
+            ),
+            SizedBox(
+              height: height / 1.31,
               child: Container(
                 decoration: const BoxDecoration(
                   image: DecorationImage(
@@ -63,17 +66,29 @@ class _ProfileViewState extends State<ProfileView> {
                       ],
                     ),
                     SizedBox(height: height / 40),
-                    Padding(
-                      padding:
-                          EdgeInsets.only(right: width / 20, left: width / 20),
-                      child: const UsersCountInfo(
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      child: UsersCountInfo(
                         textCount: 12,
                         superXCont: 5,
                         xCount: 13,
                       ),
                     ),
-                    SizedBox(height: height / 40),
-                    const TextBoxWidget(),
+                    const SizedBox(height: 20),
+                    SizedBox(
+                      height: 320,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: const [
+                            TextBoxWidget(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            TextBoxWidget(),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

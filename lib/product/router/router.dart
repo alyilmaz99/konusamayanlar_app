@@ -12,7 +12,7 @@ import 'package:konusamayanlar_app/view/home/mainpage/view/main_page_view.dart';
 import 'route_constant.dart';
 
 class AppRouter {
-  GoRouter router = GoRouter(
+  late final GoRouter router = GoRouter(
     routes: [
       GoRoute(
         name: RouteConstants.splash,

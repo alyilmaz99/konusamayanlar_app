@@ -32,7 +32,7 @@ class _LeaderBoardViewState extends LeaderBoardViewModel {
                   elevation: 0,
                   shape: const RoundedRectangleBorder(),
                   backgroundColor: ColorConst.appBarBg,
-                  fixedSize: Size(180, 45),
+                  fixedSize: const Size(180, 45),
                 ),
                 onPressed: () {},
                 child: Text(
@@ -47,7 +47,7 @@ class _LeaderBoardViewState extends LeaderBoardViewModel {
                 height: 20,
               ),
               Container(
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
               ),
             ],
           ),

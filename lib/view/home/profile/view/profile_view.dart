@@ -1,9 +1,12 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:konusamayanlar_app/product/widget/text_box_widget.dart';
 import 'package:konusamayanlar_app/product/widget/users_count_info.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -37,37 +40,57 @@ class _ProfileViewState extends State<ProfileView> {
                   children: [
                     SizedBox(height: height / 20),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
                           padding: EdgeInsets.only(
-                              right: width / 16, left: width / 8),
-                          child: CircleAvatar(
-                            radius: height / 20,
-                            backgroundImage:
-                                const AssetImage('assets/images/profile.jpg'),
+                            left: width / 6,
+                          ),
+                          child: const CircleAvatar(
+                            radius: 40,
+                            backgroundImage: AssetImage(
+                              'assets/images/profile.jpg',
+                            ),
                           ),
                         ),
-                        Column(
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Row(
                           children: [
-                            Text('Ali Yilmaz',
-                                textAlign: TextAlign.start,
-                                style: GoogleFonts.arimo(
-                                  color: const Color.fromRGBO(197, 197, 197, 1),
-                                  fontSize: 20,
-                                )),
-                            Text('@alyimaz',
-                                textAlign: TextAlign.start,
-                                style: GoogleFonts.arimo(
-                                  color: ColorConst.buttonOrange,
-                                  fontSize: 20,
-                                )),
+                            Text(
+                              'Ali Yilmaz',
+                              textAlign: TextAlign.start,
+                              style: GoogleFonts.arimo(
+                                color: const Color.fromRGBO(
+                                  197,
+                                  197,
+                                  197,
+                                  1,
+                                ),
+                                fontSize: 20,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              '@alyimaz',
+                              textAlign: TextAlign.start,
+                              style: GoogleFonts.arimo(
+                                color: ColorConst.buttonOrange,
+                                fontSize: 12,
+                              ),
+                            ),
                           ],
                         ),
                       ],
                     ),
                     SizedBox(height: height / 40),
                     const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 40,
+                      ),
                       child: UsersCountInfo(
                         textCount: 12,
                         superXCont: 5,
@@ -75,11 +98,45 @@ class _ProfileViewState extends State<ProfileView> {
                       ),
                     ),
                     const SizedBox(height: 20),
+                    ToggleSwitch(
+                      minWidth: 140.0,
+                      cornerRadius: 25.0,
+                      minHeight: 50,
+                      activeBgColors: const [
+                        [ColorConst.textGreyMore],
+                        [ColorConst.textGreyMore],
+                      ],
+                      activeFgColor: Colors.white,
+                      inactiveBgColor: ColorConst.appBarBg,
+                      inactiveFgColor: Colors.white,
+                      initialLabelIndex: 1,
+                      totalSwitches: 2,
+                      labels: const ['Share', 'Kaydedilenler'],
+                      radiusStyle: true,
+                      onToggle: (index) {
+                        print('switched to: $index');
+                      },
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
                     SizedBox(
-                      height: 320,
+                      height: 280,
                       child: SingleChildScrollView(
                         child: Column(
                           children: const [
+                            TextBoxWidget(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            TextBoxWidget(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            TextBoxWidget(),
+                            SizedBox(
+                              height: 10,
+                            ),
                             TextBoxWidget(),
                             SizedBox(
                               height: 10,

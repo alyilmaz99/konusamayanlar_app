@@ -61,9 +61,14 @@ class _ThreeDotButtonState extends State<ThreeDotButton> {
         switch (value) {
           case MenuValues.firtOption:
             showModalBottomSheet(
+              backgroundColor: ColorConst.navBarBg,
+              isScrollControlled: true,
               context: context,
               builder: (context) {
-                return const ReportPopup();
+                return SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height / 3,
+                    child: const ReportPopup());
               },
             );
             break;

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:konusamayanlar_app/product/widget/three_dot_button.dart';
 import '../../../core/constants/color_constant.dart';
-import '../report_popup_widget.dart';
 
 class TextContainer extends StatelessWidget {
   const TextContainer({
@@ -56,24 +55,7 @@ class TextContainer extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              SizedBox(
-                width: 20,
-                child: IconButton(
-                  iconSize: 16,
-                  onPressed: () {
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (context) {
-                        return const ReportPopup();
-                      },
-                    );
-                  },
-                  icon: Image.asset(
-                    'assets/images/three_dot.png',
-                    height: 16,
-                  ),
-                ),
-              )
+              const ThreeDotButton(),
             ],
           ),
           Row(

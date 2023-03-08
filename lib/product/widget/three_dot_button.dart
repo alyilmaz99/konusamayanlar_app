@@ -24,7 +24,7 @@ class _ThreeDotButtonState extends State<ThreeDotButton> {
       color: ColorConst.appBarBg,
       icon: Image.asset(
         'assets/images/three_dot.png',
-        height: 16,
+        height: 15,
       ),
       itemBuilder: (context) => [
         PopupMenuItem(

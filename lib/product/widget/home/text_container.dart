@@ -42,7 +42,7 @@ class TextContainer extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 270,
+                width: 260,
                 child: Text(
                   title,
                   style: GoogleFonts.inter(
@@ -51,9 +51,6 @@ class TextContainer extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-              ),
-              const SizedBox(
-                width: 10,
               ),
               const ThreeDotButton(),
             ],

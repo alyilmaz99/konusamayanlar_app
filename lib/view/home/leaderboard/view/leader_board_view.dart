@@ -1,8 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
+import 'package:konusamayanlar_app/product/widget/leader_board/best_profiles.dart';
 import 'package:konusamayanlar_app/product/widget/leader_board/dropdown_widget.dart';
 import 'package:konusamayanlar_app/view/home/leaderboard/viewmodel/leader_board_viewmodel.dart';
 
@@ -25,9 +27,6 @@ class _LeaderBoardViewState extends LeaderBoardViewModel {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 20,
-                ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     elevation: 0,
@@ -95,6 +94,35 @@ class _LeaderBoardViewState extends LeaderBoardViewModel {
                               ),
                             ],
                           ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            BestProfileWidget(
+                              height: height,
+                              isFirst: false,
+                              text: '2',
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            BestProfileWidget(
+                              height: height,
+                              isFirst: true,
+                              text: '1',
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            BestProfileWidget(
+                              height: height,
+                              isFirst: false,
+                              text: '3',
+                            ),
+                          ],
                         ),
                       ],
                     ),

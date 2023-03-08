@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../core/constants/color_constant.dart';
+import '../../../core/constants/color_constant.dart';
 
 class TextBoxWidget extends StatefulWidget {
   const TextBoxWidget({super.key});

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
-import 'package:konusamayanlar_app/product/widget/sent_email_popup.dart';
+import 'package:konusamayanlar_app/product/widget/auth/designedby_text_widget.dart';
+import 'package:konusamayanlar_app/product/widget/auth/sent_email_popup.dart';
 import 'package:konusamayanlar_app/view/auth/login/viewmodel/login_help_viewmodel.dart';
-import '../../../../product/widget/textfield_widget.dart';
+import '../../../../product/widget/auth/textfield_widget.dart';
 
 class LoginHelpView extends StatefulWidget {
   const LoginHelpView({super.key});

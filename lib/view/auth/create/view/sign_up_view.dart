@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
-import 'package:konusamayanlar_app/product/widget/short_login_button_widget.dart';
+import 'package:konusamayanlar_app/product/widget/auth/short_login_button_widget.dart';
 import 'package:konusamayanlar_app/product/widget/switch_row_widget.dart';
 import 'package:konusamayanlar_app/view/auth/create/viewmodel/sign_up_viewmodel.dart';
 import 'package:konusamayanlar_app/view/auth/login/view/login_page_view.dart';
 
 import '../../../../core/constants/color_constant.dart';
 import '../../../../product/router/route_constant.dart';
-import '../../../../product/widget/auth_board.dart';
-import '../../../../product/widget/designedby_text_widget.dart';
+import '../../../../product/widget/auth/auth_board.dart';
+import '../../../../product/widget/auth/designedby_text_widget.dart';
 import '../../../../product/widget/login_button_widget.dart';
-import '../../../../product/widget/textfield_widget.dart';
+import '../../../../product/widget/auth/textfield_widget.dart';
 
 class SingUpView extends StatefulWidget {
   const SingUpView({super.key});

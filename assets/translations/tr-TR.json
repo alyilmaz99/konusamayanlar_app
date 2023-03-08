@@ -18,5 +18,10 @@
   "KVKK": "KVKK",
   "textCount": "Metin Sayisi",
   "superXcount": "Super Carpi",
-  "xCount": "Carpi"
+  "xCount": "Carpi",
+  "daily": "Gunluk",
+  "weekly": "Haftalik",
+  "monthly": "Aylik",
+  "yearly": "Yillik",
+  "leaderBoard": "Lider Tablosu"
 }

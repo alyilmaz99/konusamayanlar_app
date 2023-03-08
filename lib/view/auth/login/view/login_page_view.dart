@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
 import 'package:konusamayanlar_app/product/widget/board_widgets.dart';
-import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
+import 'package:konusamayanlar_app/product/widget/auth/designedby_text_widget.dart';
 import 'package:konusamayanlar_app/product/widget/login_button_widget.dart';
 import 'package:konusamayanlar_app/view/auth/create/view/sign_up_view.dart';
 import 'package:konusamayanlar_app/view/auth/login/view/sign_in_view.dart';

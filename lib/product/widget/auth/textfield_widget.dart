@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../core/constants/color_constant.dart';
+import '../../../core/constants/color_constant.dart';
 
 class TextFieldWidget extends StatelessWidget {
   const TextFieldWidget({

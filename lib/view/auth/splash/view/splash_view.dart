@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/product/widget/board_widgets.dart';
-import 'package:konusamayanlar_app/product/widget/designedby_text_widget.dart';
+import 'package:konusamayanlar_app/product/widget/auth/designedby_text_widget.dart';
 import 'package:konusamayanlar_app/view/auth/splash/viewmodel/splash_viewmodel.dart';
 
 import '../../../../core/base/view/base_view.dart';

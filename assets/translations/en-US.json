@@ -18,5 +18,10 @@
   "KVKK": "KVKK",
   "textCount": "Text Count",
   "superXcount": "Super Cross",
-  "xCount": "Croos"
+  "xCount": "Croos",
+  "daily": "Daily",
+  "weekly": "Weekly",
+  "monthly": "Monthly",
+  "yearly": "Yearly",
+  "leaderBoard": "Leader Board"
 }

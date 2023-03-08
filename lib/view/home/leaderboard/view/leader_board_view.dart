@@ -1,11 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
-import 'package:konusamayanlar_app/product/widget/auth_board.dart';
-import 'package:konusamayanlar_app/product/widget/board_widgets.dart';
+import 'package:konusamayanlar_app/product/widget/leader_board/dropdown_widget.dart';
 import 'package:konusamayanlar_app/view/home/leaderboard/viewmodel/leader_board_viewmodel.dart';
 
 class LeaderBoardView extends StatefulWidget {
@@ -39,12 +37,12 @@ class _LeaderBoardViewState extends LeaderBoardViewModel {
                   ),
                   onPressed: () {},
                   child: Text(
-                    'Lider Tablosu',
+                    'leaderBoard',
                     style: GoogleFonts.arimo(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                     ),
-                  ),
+                  ).tr(),
                 ),
                 const SizedBox(
                   height: 20,
@@ -80,56 +78,8 @@ class _LeaderBoardViewState extends LeaderBoardViewModel {
                                   ),
                                 ),
                                 child: Center(
-                                  child: DropdownButton(
-                                    alignment: Alignment.center,
-                                    underline: Container(
-                                      height: 0,
-                                    ),
-                                    onChanged: (String? newValue) {
-                                      setState(() {
-                                        selectedValue = newValue.toString();
-                                      });
-                                    },
-                                    value: selectedValue,
-                                    dropdownColor: ColorConst.appBarBg,
-                                    items: [
-                                      DropdownMenuItem(
-                                        value: 'Gunluk',
-                                        child: Text(
-                                          'Gunluk',
-                                          style: GoogleFonts.arimo(
-                                            color: ColorConst.buttonGrey,
-                                          ),
-                                        ),
-                                      ),
-                                      DropdownMenuItem(
-                                        value: 'Haftalik',
-                                        child: Text(
-                                          'Haftalik',
-                                          style: GoogleFonts.arimo(
-                                            color: ColorConst.buttonGrey,
-                                          ),
-                                        ),
-                                      ),
-                                      DropdownMenuItem(
-                                        value: 'Aylik',
-                                        child: Text(
-                                          'Aylik',
-                                          style: GoogleFonts.arimo(
-                                            color: ColorConst.buttonGrey,
-                                          ),
-                                        ),
-                                      ),
-                                      DropdownMenuItem(
-                                        value: 'Yillik',
-                                        child: Text(
-                                          'Yillik',
-                                          style: GoogleFonts.arimo(
-                                            color: ColorConst.buttonGrey,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
+                                  child: DropDownWidget(
+                                    selectedValue: 'weekly'.tr(),
                                   ),
                                 ),
                               ),

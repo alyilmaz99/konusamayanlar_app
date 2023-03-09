@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:konusamayanlar_app/core/base/view/base_view.dart';
 import 'package:konusamayanlar_app/core/constants/color_constant.dart';
@@ -35,7 +36,9 @@ class _LeaderBoardViewState extends LeaderBoardViewModel {
                     backgroundColor: ColorConst.appBarBg,
                     fixedSize: const Size(180, 45),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push('/winner');
+                  },
                   child: Text(
                     'leaderBoard',
                     style: GoogleFonts.arimo(

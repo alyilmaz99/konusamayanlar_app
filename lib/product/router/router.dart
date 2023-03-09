@@ -8,6 +8,7 @@ import 'package:konusamayanlar_app/view/auth/login/view/login_help_view.dart';
 import 'package:konusamayanlar_app/view/auth/login/view/login_page_view.dart';
 import 'package:konusamayanlar_app/view/auth/login/view/sign_in_view.dart';
 import 'package:konusamayanlar_app/view/auth/splash/view/splash_view.dart';
+import 'package:konusamayanlar_app/view/home/leaderboard/view/leader_board_winner.dart';
 import 'package:konusamayanlar_app/view/home/mainpage/view/main_page_view.dart';
 
 import 'route_constant.dart';
@@ -75,6 +76,15 @@ class AppRouter {
         pageBuilder: (context, state) {
           return const MaterialPage(
             child: AddNewStoryView(),
+          );
+        },
+      ),
+      GoRoute(
+        name: RouteConstants.winner,
+        path: '/winner',
+        pageBuilder: (context, state) {
+          return const MaterialPage(
+            child: LeaderBoardWinner(),
           );
         },
       ),

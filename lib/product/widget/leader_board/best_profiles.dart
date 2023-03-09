@@ -32,17 +32,17 @@ class BestProfileWidget extends StatelessWidget {
               ? const Icon(
                   Icons.star,
                   color: ColorConst.buttonOrange,
-                  size: 17,
+                  size: 15,
                 )
               : const SizedBox(),
           CircleAvatar(
-            radius: isFirst == true ? 40 : 32,
+            radius: isFirst == true ? 35 : 27,
             backgroundImage: const AssetImage(
               'assets/images/profile.jpg',
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 5,
           ),
           Text(
             '@alyilmaz',
@@ -56,17 +56,17 @@ class BestProfileWidget extends StatelessWidget {
               Text(
                 "3455",
                 style: GoogleFonts.arimo(
-                  fontSize: isFirst == true ? 15 : 13,
+                  fontSize: isFirst == true ? 13 : 11,
                   color: ColorConst.buttonOrange,
                 ),
               ),
               isFirst == true
-                  ? Icon(
+                  ? const Icon(
                       Icons.arrow_drop_up,
                       color: ColorConst.buttonOrange,
                       size: 30,
                     )
-                  : Icon(
+                  : const Icon(
                       Icons.arrow_drop_down,
                       color: ColorConst.textGreyMore,
                       size: 20,
